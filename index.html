@@ -1,40 +1,45 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Современный ремонт квартир и домов в Минске. Дизайн, отделка, мебель, сантехника – всё в одном месте. Бесплатная консультация.">
-  <meta name="keywords" content="ремонт квартир, дизайн интерьера, Минск, строительные услуги, реставрация ванн, мебель на заказ">
-  <meta name="author" content="sdelaem.by">
-  <title>Сделаем.бай — Современный ремонт и дизайн в Минске</title>
-  <link rel="icon" type="image/x-icon" href="https://sdelaem.by/common/images/favicon.jpg">
+  <meta name="yandex-verification" content="6bf1f0b8615a57c2">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Сделаем.бай — Ремонт, мебель, дача под ключ в Минске</title>
+  <meta name="description" content="Все для ремонта в Минске и области: услуги сантехники, реставрация ванн, пиломатериалы, мебель на заказ. Работаем по всей Беларуси.">
+  <meta name="keywords" content="ремонт квартир, дома, офисы, Минск, пиломатериалы, реставрация ванн, жалюзи, перетяжка мебели">
+  <link rel="canonical" href="https://sdelaem.by/">
+  <meta property="og:title" content="Ремонт Квартир, Домов, Продажа Строительных Материалов в Минске">
+  <meta property="og:description" content="Все для ремонта вашего дома в Минске и Минской области. Услуги по сантехническим работам, реставрации ванн - жидким акрилом, эмалью, вкладышем. Продажа пиломатериалов.">
+  <meta property="og:image" content="https://sdelaem.by/images/bg.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sdelaem.by/">
+  <meta property="og:site_name" content="Все для ремонта в Минске и по всей Беларуси">
+  
+  <link rel="shortcut icon" href="https://sdelaem.by/common/images/favicon.jpg">
   <link rel="apple-touch-icon" href="https://sdelaem.by/common/images/webclip.png">
-  <!-- Font Awesome 6 (бесплатные иконки) -->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Fonts: Inter + Fallback -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <div class="wrapper">
   <!-- Шапка -->
   <header class="header">
-    <div class="container header__inner">
+    <div class="header__inner">
       <a href="/" class="logo">
-        <img src="https://sdelaem.by/common/images/webclip.png" alt="Сделаем.бай" width="50" height="50" loading="lazy">
-        <span class="logo__text">сделаем<span class="dot">.</span>бай</span>
+        <img src="https://sdelaem.by/common/images/webclip.png" alt="Сделаем.бай" width="45" height="45" loading="lazy">
+        <span>сделаем<span class="dot">.</span>бай</span>
       </a>
       <nav class="nav">
-        <button class="nav__toggle" id="navToggle" aria-label="Меню">
-          <i class="fas fa-bars"></i>
-        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Меню"><i class="fas fa-bars"></i></button>
         <ul class="nav__list" id="navList">
           <li><a href="#services">Услуги</a></li>
           <li><a href="#about">О нас</a></li>
-          <li><a href="#projects">Проекты</a></li>
           <li><a href="#contacts">Контакты</a></li>
-          <li><button class="btn btn--small" data-open-modal>Консультация</button></li>
+          <li><button class="btn--small" data-open-modal">Консультация</button></li>
         </ul>
       </nav>
     </div>
@@ -45,16 +50,14 @@
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__content">
-          <h1 class="hero__title">Ремонт, который <span class="accent">вдохновляет</span></h1>
-          <p class="hero__text">Дизайн, отделка, мебель и инженерные решения — под ключ. Работаем в Минске и по всей Беларуси.</p>
+          <h1>Ремонт, который <span class="accent">вдохновляет</span></h1>
+          <p>Дизайн, отделка, мебель и инженерные решения — под ключ. Работаем в Минске и по всей Беларуси.</p>
           <div class="hero__buttons">
             <button class="btn btn--primary" data-open-modal>Бесплатная консультация</button>
             <a href="#services" class="btn btn--outline">Наши услуги</a>
           </div>
         </div>
-        <div class="hero__image">
-          <!-- декоративный фон через CSS -->
-        </div>
+        <div class="hero__image"></div>
       </div>
     </section>
 
@@ -67,31 +70,15 @@
           <p>Более 10 лет опыта, прозрачные цены и гарантия на все виды работ</p>
         </div>
         <div class="benefits__grid">
-          <div class="benefit-card">
-            <i class="fas fa-ruler-combined"></i>
-            <h3>Замер и дизайн — 0 ₽</h3>
-            <p>Выезжаем на объект, делаем точный расчёт и 3D-визуализацию бесплатно.</p>
-          </div>
-          <div class="benefit-card">
-            <i class="fas fa-calendar-check"></i>
-            <h3>Соблюдаем сроки</h3>
-            <p>Чёткий план работ и контроль качества на каждом этапе.</p>
-          </div>
-          <div class="benefit-card">
-            <i class="fas fa-hand-sparkles"></i>
-            <h3>Материалы без наценки</h3>
-            <p>Закупаем всё необходимое по оптовым ценам — экономия до 20%.</p>
-          </div>
-          <div class="benefit-card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Гарантия до 3 лет</h3>
-            <p>Фиксируем обязательства в договоре, бесплатно устраняем недочёты.</p>
-          </div>
+          <div class="benefit-card"><i class="fas fa-ruler-combined"></i><h3>Замер и дизайн — 0 ₽</h3><p>Выезжаем на объект, делаем точный расчёт и 3D-визуализацию бесплатно.</p></div>
+          <div class="benefit-card"><i class="fas fa-calendar-check"></i><h3>Соблюдаем сроки</h3><p>Чёткий план работ и контроль качества на каждом этапе.</p></div>
+          <div class="benefit-card"><i class="fas fa-hand-sparkles"></i><h3>Материалы без наценки</h3><p>Закупаем всё необходимое по оптовым ценам — экономия до 20%.</p></div>
+          <div class="benefit-card"><i class="fas fa-shield-alt"></i><h3>Гарантия до 3 лет</h3><p>Фиксируем обязательства в договоре, бесплатно устраняем недочёты.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Услуги (карточки) -->
+    <!-- Стеклянные карточки услуг -->
     <section class="services" id="services">
       <div class="container">
         <div class="section-header">
@@ -99,48 +86,20 @@
           <h2>Что мы предлагаем</h2>
           <p>От черновой отделки до дизайнерской мебели — полный цикл</p>
         </div>
-        <div class="services__grid">
-          <!-- Карточки генерируются через JS, но можно и статически -->
-        </div>
+        <div class="glass-grid" id="servicesGrid"></div>
       </div>
     </section>
 
-    <!-- Секция "О нас" с цифрами -->
+    <!-- О нас с цифрами -->
     <section class="stats" id="about">
       <div class="container stats__inner">
         <div class="stats__content">
           <span class="section-tag">О компании</span>
           <h2>Делаем ремонт комфортным</h2>
           <p>Мы отказались от шаблонов и работаем с каждым клиентом индивидуально. Ваш бюджет, ваши пожелания — наш подход.</p>
-          <div class="stats__numbers">
-            <div><span>1200+</span> завершённых объектов</div>
-            <div><span>98%</span> довольных клиентов</div>
-            <div><span>10 лет</span> на рынке</div>
-          </div>
+          <div class="stats__numbers"><div><span>1200+</span> объектов</div><div><span>98%</span> довольных</div><div><span>10 лет</span> на рынке</div></div>
         </div>
-        <div class="stats__image">
-          <!-- декоративная иллюстрация -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Галерея/Проекты -->
-    <section class="gallery" id="projects">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Наши работы</span>
-          <h2>Реальные проекты</h2>
-          <p>Квартиры, дома, офисы — посмотрите примеры</p>
-        </div>
-        <div class="gallery__grid">
-          <!-- 6 картинок-заглушек, можно заменить на реальные -->
-          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/bg.jpg');"></div>
-          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/peretyjka.jpg');"></div>
-          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/mygkay-mebel.jpg');"></div>
-          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/kuxni.jpg');"></div>
-          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/vanny.jpg');"></div>
-          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/okna.jpg');"></div>
-        </div>
+        <div class="stats__image"></div>
       </div>
     </section>
 
@@ -160,15 +119,9 @@
         </div>
         <div class="contact__form">
           <form id="callbackForm" class="form">
-            <div class="form__group">
-              <input type="text" name="name" id="name" placeholder="Ваше имя" required>
-            </div>
-            <div class="form__group">
-              <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
-            </div>
-            <div class="form__group">
-              <textarea name="message" rows="3" placeholder="Комментарий (необязательно)"></textarea>
-            </div>
+            <div class="form__group"><input type="text" name="name" placeholder="Ваше имя" required></div>
+            <div class="form__group"><input type="tel" name="phone" placeholder="Телефон" required></div>
+            <div class="form__group"><textarea name="message" rows="3" placeholder="Комментарий (необязательно)"></textarea></div>
             <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
             <p class="form__note">Нажимая на кнопку, вы соглашаетесь с политикой обработки данных</p>
           </form>
@@ -179,63 +132,26 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <div class="footer__col">
-        <a href="/" class="logo">
-          <img src="https://sdelaem.by/common/images/webclip.png" alt="Сделаем.бай" width="40">
-          <span>сделаем.бай</span>
-        </a>
-        <p>Ремонт и дизайн под ключ. Делаем сложное — простым, а простое — красивым.</p>
-      </div>
-      <div class="footer__col">
-        <h4>Услуги</h4>
-        <ul>
-          <li><a href="#">Дизайн интерьера</a></li>
-          <li><a href="#">Капитальный ремонт</a></li>
-          <li><a href="#">Мебель на заказ</a></li>
-          <li><a href="#">Сантехника</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>О компании</h4>
-        <ul>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Отзывы</a></li>
-          <li><a href="#">Вакансии</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Мы в соцсетях</h4>
-        <div class="socials">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-telegram"></i></a>
-          <a href="#"><i class="fab fa-viber"></i></a>
-        </div>
-        <div class="footer__copyright">
-          © 2025 Сделаем.бай <br> УНП 291593624
-        </div>
-      </div>
+      <div class="footer__col"><a href="/" class="logo"><img src="https://sdelaem.by/common/images/webclip.png" width="35" alt=""><span>сделаем.бай</span></a><p>Ремонт и дизайн под ключ. Делаем сложное — простым, а простое — красивым.</p></div>
+      <div class="footer__col"><h4>Услуги</h4><ul><li><a href="#">Дизайн интерьера</a></li><li><a href="#">Капитальный ремонт</a></li><li><a href="#">Мебель на заказ</a></li><li><a href="#">Сантехника</a></li></ul></div>
+      <div class="footer__col"><h4>О компании</h4><ul><li><a href="#">О нас</a></li><li><a href="#">Отзывы</a></li><li><a href="#">Контакты</a></li></ul></div>
+      <div class="footer__col"><h4>Мы в соцсетях</h4><div class="socials"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-telegram"></i></a><a href="#"><i class="fab fa-viber"></i></a></div><div class="footer__copyright">© 2025 Сделаем.бай <br> УНП 291593624</div></div>
     </div>
   </footer>
 
   <!-- Модальное окно -->
   <div class="modal" id="callbackModal">
-    <div class="modal__content">
-      <button class="modal__close" aria-label="Закрыть">&times;</button>
-      <h3>Заказать консультацию</h3>
-      <form id="modalForm">
-        <input type="text" name="name" placeholder="Ваше имя" required>
-        <input type="tel" name="phone" placeholder="Ваш телефон" required>
-        <button type="submit" class="btn btn--primary btn--full">Перезвоните мне</button>
-      </form>
+    <div class="modal__content"><button class="modal__close">&times;</button><h3>Заказать консультацию</h3>
+      <form id="modalForm"><input type="text" name="name" placeholder="Ваше имя" required><input type="tel" name="phone" placeholder="Телефон" required><button type="submit" class="btn btn--primary btn--full">Перезвоните мне</button></form>
     </div>
   </div>
 
-  <button class="floating-callback" data-open-modal aria-label="Позвонить">
-    <i class="fas fa-phone-alt"></i>
-  </button>
+  <button class="floating-callback" data-open-modal aria-label="Позвонить"><i class="fas fa-phone-alt"></i></button>
 </div>
 
 <script src="js/script.js"></script>
+<!-- Yandex.Metrika -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(47447764,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/47447764" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 </body>
 </html>

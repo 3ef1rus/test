@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вариант 5 — 3D-наклон</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #e6e9f0 0%, #f2f5fa 100%);
+      padding: 2rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-header h2 {
+      font-size: 2.2rem;
+      color: #1e293b;
+    }
+    .tilt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      perspective: 800px;
+    }
+    .tilt-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      transform-style: preserve-3d;
+    }
+    .tilt-card:hover {
+      transform: translateY(-8px) rotateX(3deg) rotateY(3deg);
+      box-shadow: 0 30px 45px -15px rgba(0,0,0,0.2);
+    }
+    .tilt-card__img {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s;
+    }
+    .tilt-card:hover .tilt-card__img {
+      transform: scale(1.05);
+    }
+    .tilt-card__content {
+      padding: 1.5rem;
+    }
+    .tilt-card__content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+    .tilt-card__content p {
+      font-size: 0.85rem;
+      color: #475569;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .tilt-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: none;
+      color: #1e6f9f;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0;
+      font-size: 0.85rem;
+    }
+    .tilt-link i {
+      transition: transform 0.2s;
+    }
+    .tilt-link:hover i {
+      transform: translateX(4px);
+    }
+    @media (max-width: 640px) {
+      body { padding: 1rem; }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="section-header">
+      <h2>✨ Парящие карточки услуг</h2>
+    </div>
+    <div class="tilt-grid">
+      <div class="tilt-card">
+        <div class="tilt-card__img" style="background-image: url('https://sdelaem.by/images/peretyjka.jpg');"></div>
+        <div class="tilt-card__content">
+          <h3>Перетяжка мебели</h3>
+          <p>Восстановим любой диван, кресло, стул. Более 300 тканей.</p>
+          <button class="tilt-link">Подробнее <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="tilt-card">
+        <div class="tilt-card__img" style="background-image: url('https://sdelaem.by/images/kuxni.jpg');"></div>
+        <div class="tilt-card__content">
+          <h3>Кухни на заказ</h3>
+          <p>Индивидуальные размеры, любые фасады, встроенная техника.</p>
+          <button class="tilt-link">Подробнее <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="tilt-card">
+        <div class="tilt-card__img" style="background-image: url('https://sdelaem.by/images/vanny.jpg');"></div>
+        <div class="tilt-card__content">
+          <h3>Реставрация ванн</h3>
+          <p>Акрил, эмаль, вкладыш — как новая за 1 день.</p>
+          <button class="tilt-link">Подробнее <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="tilt-card">
+        <div class="tilt-card__img" style="background-image: url('https://sdelaem.by/images/remontnye-raboty.jpg');"></div>
+        <div class="tilt-card__content">
+          <h3>Ремонт квартир</h3>
+          <p>Под ключ: дизайн, отделка, материалы. Гарантия 3 года.</p>
+          <button class="tilt-link">Подробнее <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="tilt-card">
+        <div class="tilt-card__img" style="background-image: url('https://sdelaem.by/images/teplica.jpg');"></div>
+        <div class="tilt-card__content">
+          <h3>Теплицы</h3>
+          <p>Поликарбонат, усиленный каркас, установка за 1 день.</p>
+          <button class="tilt-link">Подробнее <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="tilt-card">
+        <div class="tilt-card__img" style="background-image: url('https://sdelaem.by/images/derevyannye-doma.jpg');"></div>
+        <div class="tilt-card__content">
+          <h3>Деревянные дома</h3>
+          <p>Из бруса и бревна под ключ. Проекты любой сложности.</p>
+          <button class="tilt-link">Подробнее <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

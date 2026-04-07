@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вариант 6 — Neumorphism</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #e0e5ec;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-header h2 {
+      font-size: 2.2rem;
+      color: #2c3e50;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+    }
+    .neumo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .neumo-card {
+      background: #e0e5ec;
+      border-radius: 40px;
+      padding: 1.5rem;
+      box-shadow: 9px 9px 16px #b8bec6, -9px -9px 16px #ffffff;
+      transition: all 0.3s;
+      text-align: center;
+    }
+    .neumo-card:hover {
+      box-shadow: inset 9px 9px 16px #b8bec6, inset -9px -9px 16px #ffffff;
+      transform: translateY(4px);
+    }
+    .neumo-card i {
+      font-size: 2.8rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .neumo-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #1e293b;
+    }
+    .neumo-card p {
+      font-size: 0.85rem;
+      color: #475569;
+      margin-bottom: 1.2rem;
+      line-height: 1.4;
+    }
+    .neumo-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: none;
+      font-weight: 600;
+      color: #2c3e50;
+      cursor: pointer;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      background: #e0e5ec;
+      box-shadow: 3px 3px 6px #b8bec6, -3px -3px 6px #ffffff;
+      transition: all 0.2s;
+    }
+    .neumo-link:hover {
+      box-shadow: inset 3px 3px 6px #b8bec6, inset -3px -3px 6px #ffffff;
+    }
+    @media (max-width: 640px) {
+      body { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section-header">
+      <h2>🤍 Мягкий неоморфизм</h2>
+    </div>
+    <div class="neumo-grid">
+      <div class="neumo-card">
+        <i class="fas fa-couch"></i>
+        <h3>Перетяжка мебели</h3>
+        <p>Восстановим диваны, кресла, стулья — более 300 тканей.</p>
+        <button class="neumo-link">Узнать →</button>
+      </div>
+      <div class="neumo-card">
+        <i class="fas fa-kitchen-set"></i>
+        <h3>Кухни на заказ</h3>
+        <p>Индивидуальные размеры, любые фасады, встроенная техника.</p>
+        <button class="neumo-link">Узнать →</button>
+      </div>
+      <div class="neumo-card">
+        <i class="fas fa-bath"></i>
+        <h3>Реставрация ванн</h3>
+        <p>Акрил, эмаль, вкладыш — как новая за 1 день.</p>
+        <button class="neumo-link">Узнать →</button>
+      </div>
+      <div class="neumo-card">
+        <i class="fas fa-tools"></i>
+        <h3>Ремонт квартир</h3>
+        <p>Под ключ: дизайн, отделка, материалы. Гарантия 3 года.</p>
+        <button class="neumo-link">Узнать →</button>
+      </div>
+      <div class="neumo-card">
+        <i class="fas fa-seedling"></i>
+        <h3>Теплицы</h3>
+        <p>Поликарбонат, усиленный каркас, установка за 1 день.</p>
+        <button class="neumo-link">Узнать →</button>
+      </div>
+      <div class="neumo-card">
+        <i class="fas fa-home"></i>
+        <h3>Деревянные дома</h3>
+        <p>Из бруса и бревна под ключ. Проекты любой сложности.</p>
+        <button class="neumo-link">Узнать →</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сделаем.бай — Минималистичные плитки</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-header h2 {
+      font-size: 2.2rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+    .section-header p {
+      color: #475569;
+    }
+    .minimal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .minimal-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .minimal-card:hover {
+      transform: translateY(-6px);
+      border-color: #cbd5e1;
+      box-shadow: 0 20px 25px -12px rgba(0,0,0,0.08);
+    }
+    .minimal-card i {
+      font-size: 2.5rem;
+      color: #1e6f9f;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .minimal-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+    .minimal-card p {
+      font-size: 0.8rem;
+      color: #64748b;
+      line-height: 1.4;
+    }
+    .minimal-card .price-tag {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #f59e0b;
+    }
+    @media (max-width: 640px) {
+      body { padding: 1rem; }
+      .minimal-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+      .minimal-card { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section-header">
+      <h2>📦 Наши услуги</h2>
+      <p>Выберите направление — мы сделаем остальное</p>
+    </div>
+    <div class="minimal-grid">
+      <a href="#" class="minimal-card">
+        <i class="fas fa-couch"></i>
+        <h3>Перетяжка мебели</h3>
+        <p>Восстановим любой диван, кресло, стул</p>
+        <span class="price-tag">от 150 BYN</span>
+      </a>
+      <a href="#" class="minimal-card">
+        <i class="fas fa-kitchen-set"></i>
+        <h3>Кухни на заказ</h3>
+        <p>Индивидуальные размеры, любые фасады</p>
+        <span class="price-tag">от 800 BYN/м</span>
+      </a>
+      <a href="#" class="minimal-card">
+        <i class="fas fa-bath"></i>
+        <h3>Реставрация ванн</h3>
+        <p>Акрил, эмаль, вкладыш</p>
+        <span class="price-tag">от 180 BYN</span>
+      </a>
+      <a href="#" class="minimal-card">
+        <i class="fas fa-tools"></i>
+        <h3>Ремонт квартир</h3>
+        <p>Под ключ, поэтапно или косметический</p>
+        <span class="price-tag">договорная</span>
+      </a>
+      <a href="#" class="minimal-card">
+        <i class="fas fa-seedling"></i>
+        <h3>Теплицы</h3>
+        <p>Поликарбонат, усиленный каркас</p>
+        <span class="price-tag">от 350 BYN</span>
+      </a>
+      <a href="#" class="minimal-card">
+        <i class="fas fa-home"></i>
+        <h3>Деревянные дома</h3>
+        <p>Из бруса и бревна под ключ</p>
+        <span class="price-tag">от 400 BYN/м²</span>
+      </a>
+      <a href="#" class="minimal-card">
+        <i class="fas fa-palette"></i>
+        <h3>Дизайн интерьера</h3>
+        <p>3D-визуализация, планировка, стиль</p>
+        <span class="price-tag">от 300 BYN/м²</span>
+      </a>
+      <a href="#" class="minimal-card">
+        <i class="fas fa-wrench"></i>
+        <h3>Сантехника</h3>
+        <p>Установка, замена, ремонт</p>
+        <span class="price-tag">от 80 BYN</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

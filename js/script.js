@@ -1,73 +1,74 @@
-// Мобильное меню (гамбургер)
-const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
+// ========== МОБИЛЬНОЕ МЕНЮ ==========
+const navToggle = document.getElementById('navToggle');
+const navList = document.getElementById('navList');
 
-if (menuToggle && navMenu) {
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
+if (navToggle && navList) {
+  navToggle.addEventListener('click', () => {
+    navList.classList.toggle('open');
   });
 }
 
-// Функционал для мобильных: клик по пункту с подменю раскрывает его
-function initMobileSubmenus() {
-  const menuItems = document.querySelectorAll('.menu-item-has-children');
-  
-  menuItems.forEach(item => {
-    const link = item.querySelector('a');
-    if (!link) return;
-    
-    // Убираем переход по ссылке для пунктов с подменю на мобильных
-    link.addEventListener('click', (e) => {
-      // Проверяем, открыто ли мобильное меню (ширина экрана <= 768px)
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        // Закрываем все остальные открытые подменю (опционально)
-        // menuItems.forEach(other => {
-        //   if (other !== item) other.classList.remove('open');
-        // });
-        item.classList.toggle('open');
-      }
-    });
+// ========== ЗАГРУЗКА КАРТОЧЕК УСЛУГ ==========
+const servicesData = [
+  { title: 'Дизайн интерьера', desc: '3D-визуализация, планировка, подбор отделки.', img: 'https://sdelaem.by/images/disain-interira.jpg', link: '/design/' },
+  { title: 'Капитальный ремонт', desc: 'Полный цикл: от демонтажа до чистовой отделки.', img: 'https://sdelaem.by/images/remontnye-raboty.jpg', link: '/remont/' },
+  { title: 'Реставрация ванн', desc: 'Акрил, эмаль, вкладыш — как новая за 1 день.', img: 'https://sdelaem.by/images/vanny.jpg', link: '/vanny/' },
+  { title: 'Мебель на заказ', desc: 'Кухни, шкафы-купе, мягкая мебель.', img: 'https://sdelaem.by/images/kuxni.jpg', link: '/kuxni/' },
+  { title: 'Натяжные потолки', desc: 'Матовые, глянцевые, парящие.', img: 'https://sdelaem.by/images/potolok.jpg', link: '/potolki/' },
+  { title: 'Сантехнические работы', desc: 'Установка, замена, ремонт.', img: 'https://sdelaem.by/images/okna.jpg', link: '/remont-stiralnyx-mashin/' },
+];
+
+function renderServices() {
+  const grid = document.querySelector('.services__grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+  servicesData.forEach(service => {
+    const card = document.createElement('div');
+    card.className = 'service-card';
+    card.innerHTML = `
+      <div class="service-card__img" style="background-image: url('${service.img}');"></div>
+      <div class="service-card__content">
+        <h3>${service.title}</h3>
+        <p>${service.desc}</p>
+        <a href="${service.link}" class="btn btn--small">Подробнее →</a>
+      </div>
+    `;
+    grid.appendChild(card);
   });
 }
 
-// При загрузке и изменении размера окна переинициализируем, если нужно
-initMobileSubmenus();
-window.addEventListener('resize', initMobileSubmenus);
-
-// Модальное окно
+// ========== МОДАЛЬНОЕ ОКНО ==========
 const modal = document.getElementById('callbackModal');
 const openBtns = document.querySelectorAll('[data-open-modal]');
-const closeBtn = modal?.querySelector('.modal-close');
+const closeBtn = modal?.querySelector('.modal__close');
 
 function openModal() {
   modal?.classList.add('open');
 }
-
 function closeModal() {
   modal?.classList.remove('open');
 }
-
 openBtns.forEach(btn => btn.addEventListener('click', openModal));
 if (closeBtn) closeBtn.addEventListener('click', closeModal);
-
-// Закрытие по клику на оверлей
 modal?.addEventListener('click', (e) => {
   if (e.target === modal) closeModal();
 });
 
-// Обработка формы (демо)
-const form = document.getElementById('callbackForm');
-if (form) {
+// ========== ОБРАБОТКА ФОРМ (демо) ==========
+function handleFormSubmit(form, successMessage = 'Спасибо! Мы свяжемся с вами.') {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
-    closeModal();
+    alert(successMessage);
     form.reset();
+    closeModal();
   });
 }
+const mainForm = document.getElementById('callbackForm');
+if (mainForm) handleFormSubmit(mainForm, 'Заявка отправлена. Менеджер перезвонит в ближайшее время.');
+const modalForm = document.getElementById('modalForm');
+if (modalForm) handleFormSubmit(modalForm);
 
-// Плавная прокрутка для якорных ссылок
+// ========== ПЛАВНЫЙ СКРОЛЛ ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
@@ -79,3 +80,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Инициализация
+renderServices();

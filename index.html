@@ -1,239 +1,241 @@
 <!DOCTYPE html>
-<html lang="ru" itemscope itemtype="http://schema.org/WebPage">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="yandex-verification" content="6bf1f0b8615a57c2">
-  <meta name="robots" content="index, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>Ремонт квартир, домов и продажа материалов в Минске | sdelaem.by</title>
-  <meta name="description" content="Все для ремонта в Минске и области: услуги сантехники, реставрация ванн, пиломатериалы, мебель на заказ. Работаем по всей Беларуси.">
-  <meta name="keywords" content="ремонт квартир, дома, офисы, Минск, пиломатериалы, реставрация ванн, жалюзи, перетяжка мебели">
-  <link rel="canonical" href="https://sdelaem.by/">
-  <meta property="og:title" content="Ремонт Квартир, Домов, Продажа Строительных Материалов в Минске">
-  <meta property="og:description" content="Все для ремонта вашего дома в Минске и Минской области. Услуги по сантехническим работам, реставрации ванн - жидким акрилом, эмалью, вкладышем. Продажа пиломатериалов.">
-  <meta property="og:image" content="https://sdelaem.by/images/bg.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sdelaem.by/">
-  <meta property="og:site_name" content="Все для ремонта в Минске и по всей Беларуси">
-  
-  <link rel="shortcut icon" href="https://sdelaem.by/common/images/favicon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Современный ремонт квартир и домов в Минске. Дизайн, отделка, мебель, сантехника – всё в одном месте. Бесплатная консультация.">
+  <meta name="keywords" content="ремонт квартир, дизайн интерьера, Минск, строительные услуги, реставрация ванн, мебель на заказ">
+  <meta name="author" content="sdelaem.by">
+  <title>Сделаем.бай — Современный ремонт и дизайн в Минске</title>
+  <link rel="icon" type="image/x-icon" href="https://sdelaem.by/common/images/favicon.jpg">
   <link rel="apple-touch-icon" href="https://sdelaem.by/common/images/webclip.png">
-  
+  <!-- Font Awesome 6 (бесплатные иконки) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter + Fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="flex-wrapper">
-  <header>
-    <div class="head-div">
-      <a href="/" aria-label="Главная">
-        <img src="https://sdelaem.by/common/images/webclip.png" width="90" height="90" alt="Логотип Сделаем.бай" loading="lazy">
+
+<div class="wrapper">
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="logo">
+        <img src="https://sdelaem.by/common/images/webclip.png" alt="Сделаем.бай" width="50" height="50" loading="lazy">
+        <span class="logo__text">сделаем<span class="dot">.</span>бай</span>
       </a>
-      <div class="description">
-        Все для ремонта<br>в Минске и по всей Беларуси
-      </div>
-      <button class="head-button" data-open-modal>Заказать звонок</button>
+      <nav class="nav">
+        <button class="nav__toggle" id="navToggle" aria-label="Меню">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav__list" id="navList">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#projects">Проекты</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+          <li><button class="btn btn--small" data-open-modal>Консультация</button></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- НАВИГАЦИЯ (полностью переделана) -->
-  <nav class="navbar">
-    <button class="menu-button" id="menuToggle" aria-label="Меню">☰</button>
-    <ul class="nav-menu" id="navMenu">
-      <!-- Мебель и декор -->
-      <li class="menu-item-has-children">
-        <a href="#">Мебель и декор</a>
-        <ul class="sub-menu">
-          <li><a href="https://mebel.sdelaem.by/">Перетяжка мебели</a></li>
-          <li><a href="/myagkaya-mebel/">Мягкая мебель</a></li>
-          <li><a href="/korpusnaya-mebel/">Корпусная мебель</a></li>
-          <li><a href="/jaluzi/">Жалюзи</a></li>
-          <li><a href="/kuxni/">Кухни на заказ</a></li>
-          <li><a href="/shkafy/">Шкафы-купе</a></li>
-          <li><a href="/design/">Дизайн интерьера</a></li>
-          <li><a href="/stoleshnicy/">Столешницы</a></li>
-        </ul>
-      </li>
-      <!-- Для дачи и сада -->
-      <li class="menu-item-has-children">
-        <a href="#">Для дачи и сада</a>
-        <ul class="sub-menu">
-          <li><a href="/vorota/">Ворота</a></li>
-          <li><a href="/zabory/">Заборы</a></li>
-          <li><a href="/teplicy/">Теплицы</a></li>
-          <li><a href="/besedki/">Беседки</a></li>
-          <li><a href="/sadovye-kacheli/">Садовые качели</a></li>
-          <li><a href="/giroskutery/">Гироскутеры</a></li>
-          <li><a href="/motobloki/">Мотоблоки</a></li>
-          <li><a href="/navesy/">Навесы</a></li>
-        </ul>
-      </li>
-      <!-- Ремонт и отделка -->
-      <li class="menu-item-has-children">
-        <a href="#">Ремонт и отделка</a>
-        <ul class="sub-menu">
-          <li><a href="/remont/">Ремонтные работы</a></li>
-          <li><a href="/okna/">Окна</a></li>
-          <li><a href="/potolki/">Натяжные потолки</a></li>
-          <li><a href="/vanny/">Реставрация ванн</a></li>
-          <li><a href="/remont-okon/">Ремонт окон</a></li>
-          <li><a href="/poly/">Наливные полы</a></li>
-          <li><a href="/rospis-sten/">Роспись стен</a></li>
-          <li><a href="/almaznoe-sverlenie/">Алмазное сверление</a></li>
-        </ul>
-      </li>
-      <!-- Строительство -->
-      <li class="menu-item-has-children">
-        <a href="#">Строительство</a>
-        <ul class="sub-menu">
-          <li><a href="/doma/">Деревянные дома</a></li>
-          <li><a href="/bani-bochki/">Бани-бочки</a></li>
-          <li><a href="/konsolnye-lestnicy/">Консольные лестницы</a></li>
-          <li><a href="/burenie/">Бурение скважин</a></li>
-          <li><a href="https://pechi.sdelaem.by/">Кладка печей</a></li>
-          <li><a href="https://climate.sdelaem.by/">Установка кондиционеров</a></li>
-          <li><a href="/lestnicy/">Лестницы</a></li>
-          <li><a href="/dveri/">Двери</a></li>
-        </ul>
-      </li>
-      <!-- Услуги -->
-      <li class="menu-item-has-children">
-        <a href="#">Услуги</a>
-        <ul class="sub-menu">
-          <li><a href="/remont-stiralnyx-mashin/">Ремонт стиральных машин</a></li>
-          <li><a href="/gruzoperevozki/">Грузоперевозки</a></li>
-          <li><a href="/remont-xolodilnikov/">Ремонт холодильников</a></li>
-          <li><a href="/vss/">Видеонаблюдение</a></li>
-          <li><a href="/pomniki/">Ритуальные услуги</a></li>
-          <li><a href="/uborka/">Клининг</a></li>
-          <li><a href="/ustanovka-dverej/">Установка дверей</a></li>
-          <li><a href="/cartridge/">Заправка картриджей</a></li>
-          <li><a href="/otkachka/">Откачка канализации</a></li>
-          <li><a href="/remont-tv/">Ремонт телевизоров</a></li>
-          <li><a href="/arenda-spectexniki/">Аренда спецтехники</a></li>
-          <li><a href="/promyshlennyj-alpinizm/">Промышленный альпинизм</a></li>
-        </ul>
-      </li>
-      <!-- Обычные ссылки -->
-      <li><a href="/catalog/">Все для дома</a></li>
-      <li><a href="/o-nas/">О нас</a></li>
-      <li><a href="/kontakty/">Контакты</a></li>
-      <li><a href="/filialy/">Филиалы</a></li>
-    </ul>
-  </nav>
-
   <main>
-    <!-- ВСЁ ОСТАЛЬНОЕ СОДЕРЖИМОЕ СТРАНИЦЫ ОСТАЁТСЯ БЕЗ ИЗМЕНЕНИЙ -->
-    <section class="main-section" style="background-image: linear-gradient(90deg, rgba(87,156,233,0.2), rgba(156,125,192,0.2)), url('https://sdelaem.by/images/bg.jpg'); background-size: cover; background-position: center;">
-      <div class="container" style="padding: 3rem 1rem;">
-        <h1>Все для ремонта квартир, домов и офисов <span class="orange">в Минске и области</span></h1>
+    <!-- Hero секция -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">Ремонт, который <span class="accent">вдохновляет</span></h1>
+          <p class="hero__text">Дизайн, отделка, мебель и инженерные решения — под ключ. Работаем в Минске и по всей Беларуси.</p>
+          <div class="hero__buttons">
+            <button class="btn btn--primary" data-open-modal>Бесплатная консультация</button>
+            <a href="#services" class="btn btn--outline">Наши услуги</a>
+          </div>
+        </div>
+        <div class="hero__image">
+          <!-- декоративный фон через CSS -->
+        </div>
       </div>
     </section>
 
-    <section class="section-blue">
+    <!-- Преимущества -->
+    <section class="benefits">
       <div class="container">
-        <h2><span class="orange">Каталог</span> услуг</h2>
-        <p>Если вы затеяли капитальный ремонт дома, то попали по адресу. На нашем сайте вы найдёте всё необходимое от пиломатериалов до сантехнических услуг, а также мы можем вернуть к жизни любую старую мебель. Цены на ремонт квартиры под ключ обычно заоблачные, и поэтому многие делают его самостоятельно. Для покупки всего необходимого вы потратите колоссальное количество времени и сил, но благодаря нашему сайту это больше не проблемы. Не надо бегать по магазинам строительных материалов, достаточно просто зайти на сайт. Только у нас вы можете заказать всё в одном месте и по доступным ценам, получить консультацию профессионалов и, что самое важно, все материалы привезут вам точно в срок и под самый порог.</p>
-        
-        <h3>Пиломатериалы</h3>
-        <p>Мы производим и продаём пиломатериалы только из экологически чистого сырья. У нас вы можете купить всё необходимое недорого как в розницу, так и оптом, привлекательная цена появилась у нас за счёт собственного леса. В ассортименте есть всё от половых досок до наполнителя для животных. Огромный выбор пропиток и лакокрасочных покрытий как отечественных, так и лучших мировых производителей.</p>
-        
-        <h3>Сантехнические услуги</h3>
-        <p>Сантехнические услуги от компании “СДЕЛАЕМ.БАЙ” — это оперативность и гарантия качества, проверенная тысячами довольных клиентов по всей Беларуси. Обратившись к нам, вы получите ответы на все интересующие вопросы. Установка и демонтаж любых сантехнических изделий. Если у вас возникла бытовая проблема — сразу звоните, и в течение 30 минут команда профессионалов прибудет к вам на помощь.</p>
-        
-        <h3><a href="https://mebel.sdelaem.by/">Перетяжка и ремонт мебели</a></h3>
-        <p>В квартиру после ремонта хочется заехать с новой мебелью, но финансов уже не так много, не стоит отчаиваться — решение есть. Мы предлагаем перетяжку любой сложности, сможем вернуть к жизни старое изделие. За долгие годы работы мы собрали лучших мастеров по всей Беларуси, поэтому вы можете не волноваться за качество. После нашей работы старую мебель не отличить от новой. Дай второй шанс старой мебели!</p>
-        
-        <h3><a href="/jaluzi/">Жалюзи</a></h3>
-        <p>Изготовление, установка и доставка жалюзи, рольштор, москитных сеток и штор. Продажа комплектующих, а также ремонт всех видов солнцезащитных систем.</p>
-        
-        <h3><a href="/vanny/">Реставрация ванн</a></h3>
-        <p>Наша компания восстанавливает все типы ванн: чугунные, акриловые, железные, из искусственного камня. В работе применяем профессиональный инструмент и европейские материалы. 3 вида обновления: наливная ванна (жидкий акрил), эмалировка (эпоксидная эмаль) и установка акрилового вкладыша.</p>
+        <div class="section-header">
+          <span class="section-tag">Почему мы</span>
+          <h2>Работаем на результат</h2>
+          <p>Более 10 лет опыта, прозрачные цены и гарантия на все виды работ</p>
+        </div>
+        <div class="benefits__grid">
+          <div class="benefit-card">
+            <i class="fas fa-ruler-combined"></i>
+            <h3>Замер и дизайн — 0 ₽</h3>
+            <p>Выезжаем на объект, делаем точный расчёт и 3D-визуализацию бесплатно.</p>
+          </div>
+          <div class="benefit-card">
+            <i class="fas fa-calendar-check"></i>
+            <h3>Соблюдаем сроки</h3>
+            <p>Чёткий план работ и контроль качества на каждом этапе.</p>
+          </div>
+          <div class="benefit-card">
+            <i class="fas fa-hand-sparkles"></i>
+            <h3>Материалы без наценки</h3>
+            <p>Закупаем всё необходимое по оптовым ценам — экономия до 20%.</p>
+          </div>
+          <div class="benefit-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Гарантия до 3 лет</h3>
+            <p>Фиксируем обязательства в договоре, бесплатно устраняем недочёты.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section-white">
+    <!-- Услуги (карточки) -->
+    <section class="services" id="services">
       <div class="container">
-        <h2><span class="orange">Мебель и декор</span></h2>
-      </div>
-      <div class="card-container">
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/peretyjka.jpg" alt="Перетяжка мебели" loading="lazy"></div><div class="card-h3">Перетяжка мебели</div><a href="https://mebel.sdelaem.by/" class="purple-button">Перейти →</a></div>
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/mygkay-mebel.jpg" alt="Мягкая мебель" loading="lazy"></div><div class="card-h3">Мягкая мебель</div><a href="/myagkaya-mebel/" class="purple-button">Перейти →</a></div>
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/korpusnay-mebel.jpg" alt="Корпусная мебель" loading="lazy"></div><div class="card-h3">Корпусная мебель</div><a href="/korpusnaya-mebel/" class="purple-button">Перейти →</a></div>
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/shkaf-kupe.jpg" alt="Шкафы-купе" loading="lazy"></div><div class="card-h3">Шкафы-купе</div><a href="/shkafy/" class="purple-button">Перейти →</a></div>
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/kuxni.jpg" alt="Кухни" loading="lazy"></div><div class="card-h3">Кухни на заказ</div><a href="/kuxni/" class="purple-button">Перейти →</a></div>
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/jalyzi.jpg" alt="Жалюзи" loading="lazy"></div><div class="card-h3">Жалюзи</div><a href="/jaluzi/" class="purple-button">Перейти →</a></div>
+        <div class="section-header">
+          <span class="section-tag">Направления</span>
+          <h2>Что мы предлагаем</h2>
+          <p>От черновой отделки до дизайнерской мебели — полный цикл</p>
+        </div>
+        <div class="services__grid">
+          <!-- Карточки генерируются через JS, но можно и статически -->
+        </div>
       </div>
     </section>
 
-    <section class="section-blue">
-      <div class="container">
-        <h2><span class="orange">Для дачи и сада</span></h2>
-      </div>
-      <div class="card-container">
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/vorota.jpg" alt="Ворота" loading="lazy"></div><div class="card-h3">Ворота</div><a href="/vorota/" class="purple-button">Перейти →</a></div>
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/zabor.jpg" alt="Заборы" loading="lazy"></div><div class="card-h3">Заборы</div><a href="/zabory/" class="purple-button">Перейти →</a></div>
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/teplica.jpg" alt="Теплицы" loading="lazy"></div><div class="card-h3">Теплицы</div><a href="/teplicy/" class="purple-button">Перейти →</a></div>
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/besedka.jpg" alt="Беседки" loading="lazy"></div><div class="card-h3">Беседки</div><a href="/besedki/" class="purple-button">Перейти →</a></div>
-      </div>
-    </section>
-
-    <section class="section-white">
-      <div class="container">
-        <h2><span class="orange">Ремонт и отделка</span></h2>
-      </div>
-      <div class="card-container">
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/remontnye-raboty.jpg" alt="Ремонтные работы" loading="lazy"></div><div class="card-h3">Ремонтные работы</div><a href="/remont/" class="purple-button">Перейти →</a></div>
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/okna.jpg" alt="Окна" loading="lazy"></div><div class="card-h3">Окна</div><a href="/okna/" class="purple-button">Перейти →</a></div>
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/potolok.jpg" alt="Натяжные потолки" loading="lazy"></div><div class="card-h3">Натяжные потолки</div><a href="/potolki/" class="purple-button">Перейти →</a></div>
-        <div class="card-div"><div class="foto-card-div-s"><img src="https://sdelaem.by/images/vanny.jpg" alt="Реставрация ванн" loading="lazy"></div><div class="card-h3">Реставрация ванн</div><a href="/vanny/" class="purple-button">Перейти →</a></div>
+    <!-- Секция "О нас" с цифрами -->
+    <section class="stats" id="about">
+      <div class="container stats__inner">
+        <div class="stats__content">
+          <span class="section-tag">О компании</span>
+          <h2>Делаем ремонт комфортным</h2>
+          <p>Мы отказались от шаблонов и работаем с каждым клиентом индивидуально. Ваш бюджет, ваши пожелания — наш подход.</p>
+          <div class="stats__numbers">
+            <div><span>1200+</span> завершённых объектов</div>
+            <div><span>98%</span> довольных клиентов</div>
+            <div><span>10 лет</span> на рынке</div>
+          </div>
+        </div>
+        <div class="stats__image">
+          <!-- декоративная иллюстрация -->
+        </div>
       </div>
     </section>
 
-    <section class="section-blue">
+    <!-- Галерея/Проекты -->
+    <section class="gallery" id="projects">
       <div class="container">
-        <h2><span class="orange">Мы работаем по всей Беларуси</span></h2>
-        <p>По Бресту, Витебску, Гомелю, Гродно, Могилёву и другим городам.</p>
+        <div class="section-header">
+          <span class="section-tag">Наши работы</span>
+          <h2>Реальные проекты</h2>
+          <p>Квартиры, дома, офисы — посмотрите примеры</p>
+        </div>
+        <div class="gallery__grid">
+          <!-- 6 картинок-заглушек, можно заменить на реальные -->
+          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/bg.jpg');"></div>
+          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/peretyjka.jpg');"></div>
+          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/mygkay-mebel.jpg');"></div>
+          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/kuxni.jpg');"></div>
+          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/vanny.jpg');"></div>
+          <div class="gallery__item" style="background-image: url('https://sdelaem.by/images/okna.jpg');"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты + форма -->
+    <section class="contact" id="contacts">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <span class="section-tag">Свяжитесь с нами</span>
+          <h2>Давайте обсудим ваш проект</h2>
+          <p>Оставьте заявку, и мы перезвоним в течение 30 минут. Бесплатный выезд дизайнера на замер.</p>
+          <ul class="contact__list">
+            <li><i class="fas fa-phone-alt"></i> <a href="tel:+375291234567">+375 (29) 123-45-67</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@sdelaem.by">info@sdelaem.by</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> г. Минск, ул. Примерная, 15</li>
+            <li><i class="far fa-clock"></i> Пн–Вс: 9:00 – 21:00</li>
+          </ul>
+        </div>
+        <div class="contact__form">
+          <form id="callbackForm" class="form">
+            <div class="form__group">
+              <input type="text" name="name" id="name" placeholder="Ваше имя" required>
+            </div>
+            <div class="form__group">
+              <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+            </div>
+            <div class="form__group">
+              <textarea name="message" rows="3" placeholder="Комментарий (необязательно)"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+            <p class="form__note">Нажимая на кнопку, вы соглашаетесь с политикой обработки данных</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer-section">
-    <div class="head-div">
-      <div>
-        <img src="https://sdelaem.by/common/images/webclip.png" width="70" alt="Логотип" loading="lazy">
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="/" class="logo">
+          <img src="https://sdelaem.by/common/images/webclip.png" alt="Сделаем.бай" width="40">
+          <span>сделаем.бай</span>
+        </a>
+        <p>Ремонт и дизайн под ключ. Делаем сложное — простым, а простое — красивым.</p>
       </div>
-      <div class="copyright">
-        © 1992-2025 Не является публичной офертой.<br>
-        Оказание информ. услуг ИП Макеев М.Н., УНП 291593624<br>
-        Время работы: Пн-Вс: 08:00–21:00<br>
-        <a class="mail" href="mailto:info@sdelaem.by">info@sdelaem.by</a>
+      <div class="footer__col">
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="#">Дизайн интерьера</a></li>
+          <li><a href="#">Капитальный ремонт</a></li>
+          <li><a href="#">Мебель на заказ</a></li>
+          <li><a href="#">Сантехника</a></li>
+        </ul>
       </div>
-      <div><a href="/karta-sajta/" class="sitemap">Карта сайта</a></div>
+      <div class="footer__col">
+        <h4>О компании</h4>
+        <ul>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">Вакансии</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Мы в соцсетях</h4>
+        <div class="socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-viber"></i></a>
+        </div>
+        <div class="footer__copyright">
+          © 2025 Сделаем.бай <br> УНП 291593624
+        </div>
+      </div>
     </div>
   </footer>
 
-  <div class="modal-overlay" id="callbackModal">
-    <div class="modal-container">
-      <button class="modal-close" aria-label="Закрыть">&times;</button>
-      <h2>Заказать консультацию</h2>
-      <form id="callbackForm">
+  <!-- Модальное окно -->
+  <div class="modal" id="callbackModal">
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Закрыть">&times;</button>
+      <h3>Заказать консультацию</h3>
+      <form id="modalForm">
         <input type="text" name="name" placeholder="Ваше имя" required>
         <input type="tel" name="phone" placeholder="Ваш телефон" required>
-        <button type="submit">Заказать звонок</button>
+        <button type="submit" class="btn btn--primary btn--full">Перезвоните мне</button>
       </form>
     </div>
   </div>
 
-  <button class="callback-fixed" data-open-modal aria-label="Заказать звонок">✆</button>
+  <button class="floating-callback" data-open-modal aria-label="Позвонить">
+    <i class="fas fa-phone-alt"></i>
+  </button>
 </div>
 
 <script src="js/script.js"></script>
-<!-- Yandex.Metrika -->
-<script>
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
-  ym(47447764,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/47447764" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 </body>
 </html>

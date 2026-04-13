@@ -141,7 +141,7 @@ h2 {
   color: var(--text-dark);
 }
 .logo img {
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 .dot {
   color: var(--accent);
@@ -209,7 +209,7 @@ h2 {
 .hero__image {
   flex: 1;
   min-height: 300px;
-  background: url('https://images.pexels.com/photos/2766254/pexels-photo-2766254.jpeg?auto=compress&cs=tinysrgb&w=600') center/cover no-repeat;
+  background: url('/img/main-bg.jpg') center/cover no-repeat;
   border-radius: 32px;
   box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
 }
@@ -236,8 +236,9 @@ h2 {
 .benefit-card i { font-size: 2.2rem; color: var(--primary); margin-bottom: 1rem; }
 .benefit-card h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
 
-/* ========== СТЕКЛЯННЫЕ КАРТОЧКИ ========== */
-.services { padding: 4rem 0; background: var(--bg-light); }
+/* ========== СТЕКЛЯННЫЕ КАРТОЧКИ (общие) ========== */
+.services { padding: 4rem 0; }
+.services.alt-bg { background: var(--bg-light); }
 .glass-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -480,3 +481,148 @@ h2 {
   min-height: 100vh;
 }
 main { flex: 1; }
+/* ========== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА ========== */
+.modal__content textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  transition: var(--transition);
+}
+.modal__content textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(30,111,159,0.2);
+}
+.modal__content h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--primary-dark);
+}
+.modal__content .btn--full {
+  margin-top: 0.5rem;
+}
+/* ========== ФУТЕР  ========== */
+.footer--card {
+  background: #0f172a;
+  padding: 2rem 0 1.5rem;
+}
+
+.footer__card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 2rem;
+}
+
+.footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.footer__brand {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer__brand .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.footer__brand .logo img {
+  border-radius: 12px;
+}
+
+.footer__brand p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+  margin-top: 0.2rem;
+}
+
+.footer__requisites-box {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer__requisites-box h4 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.3px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer__requisites-box h4::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.requisites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.7rem;
+}
+
+.requisites-grid div {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.requisites-grid i {
+  color: var(--accent);
+  width: 22px;
+  font-size: 0.9rem;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .footer__card {
+    padding: 1.5rem;
+  }
+  .footer__row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .requisites-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer__requisites-box h4::after {
+    width: 30px;
+  }
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Окна и балконы — КуплюСегодня</title>
+  <meta name="description" content="Окна ПВХ, деревянные, алюминиевые. Остекление и отделка балконов в Минске. Бесплатный замер, гарантия.">
+  <link rel="icon" href="img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .service-hero {
+      background: linear-gradient(135deg, #e6f4ff, #d9e8f5);
+      padding: 3rem 0;
+    }
+    .service-hero__inner {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .service-hero__content { flex: 1; }
+    .service-hero__image {
+      flex: 1;
+      min-height: 280px;
+      background: url('img/okna&balk.jpg') center/cover no-repeat;
+      border-radius: 32px;
+      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 640px) {
+      .service-hero__inner { flex-direction: column; text-align: center; }
+    }
+
+    /* Аккордеон с плавным раскрытием */
+    .accordion-item {
+      background: white;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      border: 1px solid #eef2f6;
+    }
+    .accordion-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 1.5rem;
+      background: white;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: background 0.2s;
+      text-align: left;
+    }
+    .accordion-header:hover { background: #f8fafc; }
+    .accordion-header i:first-child { color: var(--primary); width: 24px; }
+    .accordion-icon { transition: transform 0.3s; color: var(--primary); }
+    .accordion-header.active .accordion-icon { transform: rotate(180deg); }
+    .accordion-body {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0 1.5rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      transition: max-height 0.4s ease-out, opacity 0.3s ease, padding 0.3s ease;
+      border-top: none;
+    }
+    .accordion-body.show {
+      max-height: 1000px;
+      opacity: 1;
+      padding: 0 1.5rem 1.2rem 1.5rem;
+      border-top: 1px solid #eef2f6;
+    }
+    .accordion-body ul, .accordion-body ol { margin: 0.8rem 0 0.8rem 1.2rem; }
+    .accordion-body li { margin-bottom: 0.4rem; }
+    @media (max-width: 640px) {
+      .accordion-header { padding: 1rem; font-size: 1rem; }
+      .accordion-body.show { padding: 0 1rem 1rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__inner">
+      <a href="/" class="logo">
+        <img src="img/logo.png" alt="КуплюСегодня" width="70" height="50" loading="lazy">
+        <span>Куплю<span class="dot">.</span>Сегодня</span>
+      </a>
+      <nav class="nav">
+        <button class="nav__toggle" id="navToggle" aria-label="Меню"><i class="fas fa-bars"></i></button>
+        <ul class="nav__list" id="navList">
+          <li><a href="/#services-main">Наши направления</a></li>
+          <li><a href="/#dacha">Для дачи</a></li>
+          <li><a href="/#remont">Ремонт</a></li>
+          <li><a href="/#about">О нас</a></li>
+          <li><a href="/#contacts">Контакты</a></li>
+          <li><button class="btn--small" data-open-modal>Консультация</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="service-hero">
+      <div class="container service-hero__inner">
+        <div class="service-hero__content">
+          <h1>Окна и балконы <span class="accent">в Минске</span></h1>
+          <p>Бесплатный замер. Гарантия 10 лет. Установка под ключ.</p>
+          <div class="hero__buttons" style="margin-top: 1.5rem;">
+            <button class="btn btn--primary" data-open-modal>Бесплатная консультация</button>
+          </div>
+        </div>
+        <div class="service-hero__image"></div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Надёжные профили</span>
+          <h2>Окна</h2>
+          <p>ПВХ, дерево, алюминий — любой вариант</p>
+        </div>
+        <div class="glass-grid" id="windowsGrid"></div>
+      </div>
+    </section>
+
+    <section class="services alt-bg">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Уют и пространство</span>
+          <h2>Балконы и лоджии</h2>
+          <p>Остекление, отделка, вынос, кровля — под ключ</p>
+        </div>
+        <div class="glass-grid" id="balconyGrid"></div>
+      </div>
+    </section>
+
+    <section class="services" id="details">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Полезно знать</span>
+          <h2>Всё об окнах и балконах</h2>
+          <p>Материалы, типы открывания, выбор профиля — коротко и понятно</p>
+        </div>
+        <div class="accordion" id="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header"><i class="fas fa-cube"></i> Материалы оконных конструкций <i class="fas fa-chevron-down accordion-icon"></i></button>
+            <div class="accordion-body">
+              <p>Окна могут быть изготовлены из следующих материалов:</p>
+              <ul><li><strong>ПВХ</strong> — качественная фурнитура, разные конфигурации, усилитель из оцинкованной стали.</li><li><strong>Алюминий</strong> — подходит для промышленных зданий, офисов, магазинов, зимних садов, остекления балконов.</li></ul>
+              <p><strong>Типы рам:</strong> спаренные, раздельные, одинарные.</p>
+              <p>Окна обеспечивают естественное освещение, доступ свежего воздуха, сохраняют тепло зимой и прохладу летом, защищают от шума.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header"><i class="fas fa-arrows-alt"></i> Типы открывания окон <i class="fas fa-chevron-down accordion-icon"></i></button>
+            <div class="accordion-body">
+              <ul><li><strong>Откидные</strong> — вертикальное проветривание, компактные размеры.</li><li><strong>Поворотные</strong> — удобны, просты в использовании, подходят для любых помещений.</li><li><strong>Поворотно-откидные</strong> — самый распространённый тип, открываются в разных вариантах.</li><li><strong>Глухие</strong> — плотное закрытие, идеальны для боковых стенок балкона, подъездов, террас.</li><li><strong>Раздвижные</strong> — для балконов и лоджий, герметичные стыки, отталкивают холод.</li></ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header"><i class="fas fa-chart-line"></i> Как выбрать профиль? <i class="fas fa-chevron-down accordion-icon"></i></button>
+            <div class="accordion-body">
+              <p><strong>Классы профилей:</strong></p>
+              <ul><li><strong>Класс А</strong> — качество, максимальная теплоизоляция, приемлемая цена.</li><li><strong>Класс В</strong> — устойчивость, надёжность, низкая цена.</li><li><strong>Класс С</strong> — подвергаются деформации, менее устойчивы.</li></ul>
+              <p><strong>На что обращать внимание:</strong> однородность, ширина, толщина конструкции, количество воздушных камер и стеклопакетов.</p>
+              <p><strong>Качества хорошего профиля:</strong> надёжность, неординарный дизайн, экологичность, цветовая стойкость, доступная цена, долгий срок службы, шумоизоляция.</p>
+              <p>Наша компания работает только с проверенными производителями (Rehau и др.). Поможем подобрать идеальный профиль под ваше помещение.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header"><i class="fas fa-home"></i> Куда устанавливаем? <i class="fas fa-chevron-down accordion-icon"></i></button>
+            <div class="accordion-body">
+              <p>Подбираем конструкцию в зависимости от помещения:</p>
+              <ul><li>Для неотапливаемых помещений (летняя кухня, веранда, беседка) — 1-камерный стеклопакет.</li><li>Для детских учреждений — двухкамерные стеклопакеты (тепло + шумоизоляция).</li></ul>
+              <p><strong>Где устанавливаем:</strong> балконы, лоджии, балконные блоки, летние домики, террасы.</p>
+              <p>Монтаж доверьте профессионалам — мы делаем аккуратно, с гарантией. Самостоятельная установка часто приводит к дефектам и дополнительным расходам.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="section-header"><h2>Наши преимущества</h2></div>
+        <div class="benefits__grid">
+          <div class="benefit-card"><i class="fas fa-tape"></i><h3>Бесплатный замер</h3><p>Выезд в удобное время</p></div>
+          <div class="benefit-card"><i class="fas fa-clock"></i><h3>Установка за 3 часа</h3><p>Аккуратно и без пыли</p></div>
+          <div class="benefit-card"><i class="fas fa-shield-alt"></i><h3>Гарантия 10 лет</h3><p>На профиль и монтаж</p></div>
+          <div class="benefit-card"><i class="fas fa-chart-line"></i><h3>Опыт 15+ лет</h3><p>Тысячи довольных клиентов</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacts">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <span class="section-tag">Свяжитесь с нами</span>
+          <h2>Нужна консультация?</h2>
+          <p>Оставьте заявку — мы перезвоним за 30 минут.</p>
+          <ul class="contact__list">
+            <li><i class="fas fa-phone-alt"></i> <a href="tel:+375333632315">+375 (33) 363-23-15</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:kuplysegodnya@gmail.com">kuplysegodnya@gmail.com</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> г. Минск, ул. Каменногорская, 47, 58</li>
+          </ul>
+        </div>
+        <div class="contact__form">
+          <form id="windowsForm" class="form">
+            <div class="form__group"><input type="text" name="name" placeholder="Ваше имя" required></div>
+            <div class="form__group"><input type="tel" name="phone" placeholder="Телефон" required></div>
+            <div class="form__group"><textarea name="message" rows="2" placeholder="Комментарий (необязательно)"></textarea></div>
+            <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+            <p class="form__note">Нажимая на кнопку, вы соглашаетесь с политикой обработки данных</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer--card">
+    <div class="container">
+      <div class="footer__card">
+        <div class="footer__row">
+          <div class="footer__brand">
+            <a href="/" class="logo">
+              <img src="img/logo_foot.png" width="45" alt="КуплюСегодня">
+              <span>Куплю<span class="dot">.</span>Сегодня</span>
+            </a>
+            <p>Ремонт и дизайн под ключ. Делаем сложное — простым, а простое — красивым.</p>
+          </div>
+          <div class="footer__requisites-box">
+            <h4>Реквизиты</h4>
+            <div class="requisites-grid">
+              <div><i class="fas fa-building"></i> ООО "ШАНСКРИЭТОР"</div>
+              <div><i class="fas fa-id-card"></i> УНП: 193773844</div>
+              <div><i class="fas fa-map-marker-alt"></i> г. Минск, ул. Каменногорская, 47, 58</div>
+              <div><i class="fas fa-credit-card"></i> Р/с: BY11ALFA30122F22070010270000</div>
+              <div><i class="fas fa-university"></i> в BYN в ЗАО "Альфа-Банк"</div>
+              <div><i class="fas fa-code-branch"></i> БИК: ALFABY2X</div>
+              <div><i class="fas fa-calendar-check"></i> Зарегистрирован в ЕГР 28.06.2024.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">© 2026 КУПЛЮСЕГОДНЯ. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно с комментарием -->
+  <div class="modal" id="callbackModal">
+    <div class="modal__content">
+      <button class="modal__close">&times;</button>
+      <h3>Заказать консультацию</h3>
+      <form id="modalForm">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <textarea name="comment" rows="2" placeholder="Комментарий / пожелания (необязательно)"></textarea>
+        <button type="submit" class="btn btn--primary btn--full">Перезвоните мне</button>
+      </form>
+    </div>
+  </div>
+  <button class="floating-callback" data-open-modal aria-label="Позвонить"><i class="fas fa-phone-alt"></i></button>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+  const windowsData = [
+    { title: 'ПВХ окна Rehau', desc: '3–6 камер, энергосбережение, шумоизоляция.', price: 'от 180 BYN', img: 'img/okna-pvh.jpg' },
+    { title: 'Деревянные окна', desc: 'Экологичный массив, тепло и эстетика.', price: 'от 450 BYN', img: 'img/okna-derevo.jpg' },
+    { title: 'Алюминиевые окна', desc: 'Панорамное остекление, прочность и лёгкость.', price: 'от 350 BYN', img: 'img/okna-al.jpg' }
+  ];
+  const balconyData = [
+    { title: 'Остекление балконов', desc: 'Холодное или тёплое, алюминий или ПВХ.', price: 'от 120 BYN/м²', img: 'img/balkon-osteklenie.jpg' },
+    { title: 'Отделка балконов', desc: 'Сайдинг, вагонка, пластик — под ключ.', price: 'от 80 BYN/м²', img: 'img/balkon-otdelka.png' },
+    { title: 'Вынос и крыша', desc: 'Увеличение площади, козырёк, кровля.', price: 'от 350 BYN', img: 'img/balkon-vinos.jpg' },
+    { title: 'Парапет и утепление', desc: 'Кирпич, пеноблок, минеральная вата.', price: 'от 100 BYN/м²', img: 'img/balkon-uteplenie.jpg' }
+  ];
+  function renderGrid(containerId, data) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = '';
+    data.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'glass-card';
+      card.innerHTML = `
+        <div class="glass-card__img"><img src="${item.img}" alt="${item.title}" loading="lazy"></div>
+        <div class="glass-card__content">
+          <h3>${item.title}</h3>
+          <p>${item.desc}</p>
+          <div class="glass-card__price">${item.price}</div>
+          <button class="glass-link" data-open-modal>Заказать <i class="fas fa-arrow-right"></i></button>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+    document.querySelectorAll('[data-open-modal]').forEach(btn => {
+      btn.removeEventListener('click', window.openModalHandler);
+      window.openModalHandler = () => { document.getElementById('callbackModal')?.classList.add('open'); };
+      btn.addEventListener('click', window.openModalHandler);
+    });
+  }
+  renderGrid('windowsGrid', windowsData);
+  renderGrid('balconyGrid', balconyData);
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const body = header.nextElementSibling;
+      const isActive = header.classList.contains('active');
+      accordionHeaders.forEach(h => {
+        h.classList.remove('active');
+        if (h.nextElementSibling) {
+          h.nextElementSibling.style.maxHeight = null;
+          h.nextElementSibling.classList.remove('show');
+        }
+      });
+      if (!isActive) {
+        header.classList.add('active');
+        if (body) {
+          body.classList.add('show');
+          body.style.maxHeight = body.scrollHeight + "px";
+        }
+      }
+    });
+  });
+  if (accordionHeaders.length) accordionHeaders[0].click();
+  const windowsForm = document.getElementById('windowsForm');
+  if (windowsForm) {
+    windowsForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = windowsForm.querySelector('input[name="name"]')?.value || '';
+      const phone = windowsForm.querySelector('input[name="phone"]')?.value || '';
+      const comment = windowsForm.querySelector('textarea[name="message"]')?.value || '';
+      alert(`Спасибо, ${name}! Наш специалист свяжется с вами по номеру ${phone}.${comment ? '\nКомментарий: ' + comment : ''}`);
+      windowsForm.reset();
+    });
+  }
+</script>
+</body>
+</html>
